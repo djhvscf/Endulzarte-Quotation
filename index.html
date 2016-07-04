@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="lib/jquery-1.12.4.js"></script>
+        <script src="lib/ag-grid.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="cliente">Cliente</label>
+                        <input type="text" class="form-control" id="cliente">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="contacto">Contacto</label>
+                        <input type="text" class="form-control" id="contacto">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" class="form-control" id="fecha">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"> 
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="form-control" id="direccion">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"> 
+                    <div class="form-group">
+                        <label for="descuento">Descuento (%)</label>
+                        <input type="number" class="form-control" id="descuento">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tipopago">Tipo de Pago</label>
+                        <input type="text" class="form-control" id="tipopago">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4"> 
+                    <div class="form-group">
+                        <label for="Buscar">Buscar:</label>
+                        <input type="text" class="form-control" id="buscar">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myGrid" class="ag-fresh"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="granTotal">Gran Total</label>
+                            <input type="text" class="form-control" id="granTotal" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="descuentoFinal">Descuento</label>
+                            <input type="text" class="form-control" id="descuentoFinal" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="subtotal">Subtotal</label>
+                            <input type="text" class="form-control" id="subtotal" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="Transporte">Transporte</label>
+                            <input type="number" class="form-control" id="transporte">
+                        </div>
+                        <div class="form-group">
+                            <label for="valorFinalTotal">Valor Total</label>
+                            <input type="number" class="form-control" id="valorFinalTotal" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
