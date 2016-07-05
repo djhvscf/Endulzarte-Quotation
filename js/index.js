@@ -70,28 +70,15 @@ function numberNewValueHandler(params) {
 }
 
 function cellValueChanged() {
-    var granTotal = 0;
     gridOptions.api.softRefreshView();
-    gridOptions.api.forEachNode(function (e) {
-        granTotal += gridOptions.api.getValue("total", e);
-    });
-    $("#granTotal").val(granTotal);
+    calculos.calcular(gridOptions);   
 }
 
 var rowData = [
     {
         item: "1", 
-        codigo: "Celica",
-        producto: "Queque",
-        cantidad: 2,
-        unidad: "",
-        valor: 3500,
-        total: 0
-    },
-    {
-        item: "2", 
-        codigo: "Celica",
-        producto: "Queque",
+        codigo: "",
+        producto: "",
         cantidad: 0,
         unidad: "",
         valor: 0,
@@ -110,4 +97,18 @@ var gridOptions = {
 document.addEventListener("DOMContentLoaded", function() {
     var eGridDiv = document.querySelector('#myGrid');
     new agGrid.Grid(eGridDiv, gridOptions);
+
+    $("#agregarFilas").click(function() {
+        gridHelper.agregarFilas(gridOptions)
+    });
+
+    $("#descuento").change(function() {
+        calculos.calcular(gridOptions); 
+    });
+
+    $("#transporte").change(function() {
+        calculos.calcular(gridOptions); 
+    });
+
+    calculos.calcular(gridOptions); 
 });
